@@ -1,9 +1,6 @@
 package dojo2;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Auto
 {
@@ -51,11 +48,20 @@ public class Auto
     public static void main(String [] args) {
         Auto auto1 = new Auto("red", FuelType.DIESEL, 1000, "ABC321");
         Auto auto2 = new Auto("red", FuelType.GASOLINE, 1200, "ABC321");
+        Auto auto3 = new Auto("red", FuelType.ELECTRIC, 500, "ABC321");
 
-        Map<Auto, String> autok = new HashMap<Auto, String>();
-        autok.put(auto1, "verda1");
-        autok.put(auto2, "verda2");
+        List<Auto> autok = new ArrayList<Auto>();
+        autok.add(auto1);
+        autok.add(auto2);
+        autok.add(auto3);
+        System.out.println(autok.indexOf(auto2));
 
-        System.out.println(autok.size());
+//        Map<Auto, String> autok = new HashMap<Auto, String>();
+//        autok.put(auto1, "verda1");
+//        autok.put(auto2, "verda2");
+//        autok.put(auto3, "verda3");
+//
+//        System.out.println(autok.size());
+//        System.out.println(autok.get(auto2));
     }
 }
